@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=./values.schema.json
+namespace: ops360
+awsRegion: us-east-1
+replicaCount: 1
+image: image-url:tag
+servicePorts:
+  - name: http
+    port: 9000
+
+serviceHealthPath: /auth/api/v1/method/external
+
+ingressName: auth-service-ingress
+ingressOrder: 10
+
+# Routing
+routePrefix: /auth
+routeHost: "example.com"
+routePortName: http
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+
+# Resources
+serviceCpu: 1
+serviceMemory: 2G
+
+# Service Image Config Path
+serviceConfigPath: "/home/user/app/conf"
+
+## Database Configuration
+# Postgres
+postgresDb: authservice
+serviceAccountName: "auth-service-sa"
+
+## Security
+# Configure Java Keystore
+keystoreEnabled: true
+
+# AC Authentication
+authEnabled: true
+
+# Secrets
+secretName: auth-service-secrets
+secretEntries:
+  - POSTGRES_USERNAME
+  - POSTGRES_PASSWORD
+  - POSTGRES_DATABASE
+  - POSTGRES_HOST
+  - POSTGRES_PORT
+  - PLAY_HTTP_SECRET_KEY
+  - KEYSTORE_KEY_ALIAS
+  - KEYSTORE_KEY_PASSWORD
+  - KEYSTORE_PASSWORD
+  - KEYSTORE_SIG_ALG
+
+mfaEnabled: false
+MFAEndpoints:
+  auth: ""
+  logout: ""
+  redirect: ""
+  ops360: ""
+  token: ""
+  logoutRedirect: ""

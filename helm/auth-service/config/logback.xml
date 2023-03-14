@@ -1,0 +1,20 @@
+<!-- https://www.playframework.com/documentation/latest/SettingsLogger -->
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%date [%thread] %-5level %logger{36} %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="ASYNCSTDOUT" class="ch.qos.logback.classic.AsyncAppender">
+    <appender-ref ref="STDOUT" />
+  </appender>
+
+  <logger name="play" level="INFO" />
+  <logger name="application" level="INFO" />
+  <logger name="com.ac.bdms" level="INFO" />
+
+  <root level="INFO">
+    <appender-ref ref="ASYNCSTDOUT" />
+  </root>
+</configuration>

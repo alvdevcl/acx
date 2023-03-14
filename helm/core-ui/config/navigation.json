@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Browsing",
+    "pages":
+    [
+        {
+          "title": "Data Master (AC+)",
+          "service": ["AUTHENTICATION.ALL", "BROWSE.ALL"],
+          "url": "/browse/ac/search"
+        }
+      ]
+  },
+  {
+    "title": "Exceptions  ",
+    "pages": [
+      {
+        "title": "Summary",
+        "service": ["AUTHENTICATION.ALL", "OPS.CLEANSING", "OPS.ALL"],
+        "url": "/cleansing/"
+      },
+      {
+        "title": "Configuration",
+        "service": ["AUTHENTICATION.ALL", "DCIS.ALL", "DCIS.ADMIN", "DCIS.CONFIG"],
+        "url": "/cleansing/configuration/"
+      }
+      
+    ]
+  },
+  {
+    "title": "Admin  ",
+    "pages": [
+      {
+        "title": "Data Views",
+        "service": ["AUTHENTICATION.ALL", "DATAMODEL.ADMIN.ALL", "DATAMODEL.ADMIN.DATAVIEWS"],
+        "url": "/data-view-admin/"
+      },
+      {
+        "title": "Business Process",
+        "service": ["AUTHENTICATION.ALL", "DATAMODEL.ADMIN.ALL", "DATAMODEL.ADMIN.RULES"],
+        "url": "/bpm-admin/"
+      },
+      {
+        "title": "Rules Catalog",
+        "service": ["AUTHENTICATION.ALL", "DATAMODEL.ADMIN.ALL", "DATAMODEL.ADMIN.RULES"],
+        "url": "/data-model-admin/rules-catalog"
+      },
+      {
+        "title": "Tasks",
+        "service": ["AUTHENTICATION.ALL", "DATAMODEL.ADMIN.ALL", "DATAMODEL.ADMIN.RULES"],
+        "url": "/task-service"
+      },
+      {
+        "title": "Attributes Rules",
+        "service": ["AUTHENTICATION.ALL", "DATAMODEL.ADMIN.ALL", "DATAMODEL.ADMIN.RULES"],
+        "url": "/data-model-admin/attributes-rules"
+      },
+      {
+        "title": "Data Model",
+        "service": ["DATAMODEL.ADMIN.ALL", "DATAMODEL.ADMIN.RULES"],
+        "url": "/data-model-admin/attributes-rules"
+      }
+    ]
+  }
+]

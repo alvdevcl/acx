@@ -1,0 +1,6 @@
+dependencies:
+- name: ops360lib
+  repository: file://../ops360lib
+  version: 1.0.0
+digest: sha256:00adc1c46923ca2b96416754956373182e9fbcab5ce9b7a19bf739a2417bf791
+generated: "2022-08-31T13:12:25.582280123Z"

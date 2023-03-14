@@ -1,0 +1,126 @@
+[
+  {
+    "name": "AUTHENTICATION.ALL",
+    "description": "Full access to Authentication & Authorization service"
+  },
+  {
+    "name": "AUTHENTICATION.SERVICES",
+    "description": "Access to Services API for Authentication & Authorization service"
+  },
+  {
+    "name": "AUTHENTICATION.DATAVIEWS",
+    "description": "Access to Dataviews API for Authentication & Authorization service"
+  },
+  {
+    "name": "AUTHENTICATION.ROLES",
+    "description": "Access to Roles API for Authentication & Authorization service"
+  },
+  {
+    "name": "AUTHENTICATION.USERS",
+    "description": "Access to Users API for Authentication & Authorization service"
+  },
+  {
+    "name": "AUTHENTICATION.BPM",
+    "description": "Access to BPM API for Authentication & Authorization service"
+  },
+  {
+    "name": "ACSELECT.READ",
+    "description": "Access for reading AC Select data"
+  },
+  {
+    "name": "ACSELECT.ALL",
+    "description": "Access for reading and writing AC Select data"
+  },
+  {
+    "name": "OPS.ENRICHMENT",
+    "description": "Access for Ops360 Enrichment data"
+  },
+  {
+    "name": "BDMS.DATA.READ",
+    "description": "For access to API for retrieving data."
+  },
+  {
+    "name": "BDMS.READ.ANYVIEW",
+    "description": "For reading any Data View."
+  },
+  {
+    "name": "BDMS.DATA.ALL",
+    "description": "For access to API for retrieving, creating, updating and deleting data."
+  },
+  {
+    "name": "BDMS.META.READ",
+    "description": "For access to API for retrieving meta data such as classes deﬁned for a model and attributes within a class."
+  },
+  {
+    "name": "BDMS.META.ALL",
+    "description": "For full access to meta data API."
+  },
+  {
+    "name": "BROWSE.ALL",
+    "description": "For full access to Browse API"
+  },
+  {
+    "name": "BDMS.ALL",
+    "description": "For full access to API"
+  },
+  {
+    "name": "OPS.PROCESSTRACKING.UPDATE",
+    "description": "Permission to send updates for processes."
+  },
+  {
+    "name": "OPS.CLEANSING",
+    "description": "Permission to ."
+  },
+  {
+    "name": "OPS.ACQUISITION",
+    "description": "Permission to ."
+  },
+  {
+    "name": "OPS.WORKFLOW",
+    "description": "Permission to ."
+  },
+  {
+    "name": "OPS.DISTRIBUTION",
+    "description": "Permission to ."
+  },
+  {
+    "name": "OPS.ALL",
+    "description": "Permission to ."
+  },
+  {
+    "name": "DATAMODEL.ADMIN.DATAVIEWS",
+    "description": "View Data Model configuration"
+  },
+  {
+    "name": "DATAMODEL.ADMIN.RULES",
+    "description": "Configure attribute derivation and validation rules"
+  },
+  {
+    "name": "DATAMODEL.ADMIN.ALL",
+    "description": "Full access to data model configuration"
+  },
+  {
+    "name": "TASKS.ALL",
+    "description": "Full access to TASKS service."
+  },
+  {
+    "name": "DCIS.ALL",
+    "description": "Full access to DCIS service."
+  },
+  {
+    "name": "DCIS.GROUPS",
+    "description": "Access to DCIS for retrieving groups info."
+  },
+  {
+    "name": "DCIS.ISSUES",
+    "description": "Access to DCIS for retrieving issues data."
+  },
+  {
+    "name": "DCIS.CONFIG",
+    "description": "Create private data cleansing conﬁguration."
+  },
+  {
+    "name": "DCIS.ADMIN",
+    "description": "Can update and delete all conﬁgurations."
+  }
+]

@@ -1,0 +1,27 @@
+replicaCount: 1
+image: 039556708828.dkr.ecr.us-east-1.amazonaws.com/alveo-data-browsing-ui:1.0.13
+servicePorts:
+  - name: http
+    port: 8080
+
+serviceHealthPath: /healthz
+
+# Routing
+ingressName: data-browse-ui-ingress
+ingressOrder: 40
+
+routePrefix: /browse
+routeHost: "example.com"
+routePortName: http
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+
+# Resources
+serviceCpu: 1
+serviceMemory: 1Gi
+
+# Service Image Config Path
+serviceConfigPath: "/etc/nginx"

@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome4",
+  "definitions": {
+    "Welcome4": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "replicaCount": {
+          "type": "integer"
+        },
+        "image": {
+          "type": "string"
+        },
+        "servicePorts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServicePort"
+          }
+        },
+        "serviceHealthPath": {
+          "type": "string"
+        },
+        "ingressName": {
+          "type": "string"
+        },
+        "ingressOrder": {
+          "type": "integer"
+        },
+        "routePrefix": {
+          "type": "string"
+        },
+        "routeHost": {
+          "type": "string"
+        },
+        "routePortName": {
+          "type": "string"
+        },
+        "serviceLivenessProbeName": {
+          "type": "string"
+        },
+        "serviceReadinessProbeName": {
+          "type": "string"
+        },
+        "serviceCpu": {
+          "type": "integer"
+        },
+        "serviceMemory": {
+          "type": "string"
+        },
+        "serviceConfigPath": {
+          "type": "string"
+        },
+        "postgresDb": {
+          "type": "string"
+        },
+        "serviceAccountName": {
+          "type": "string"
+        },
+        "keystoreEnabled": {
+          "type": "boolean"
+        },
+        "authEnabled": {
+          "type": "boolean"
+        },
+        "secretName": {
+          "type": "string"
+        },
+        "secretEntries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "authEnabled",
+        "image",
+        "ingressName",
+        "ingressOrder",
+        "keystoreEnabled",
+        "postgresDb",
+        "replicaCount",
+        "routeHost",
+        "routePortName",
+        "routePrefix",
+        "secretEntries",
+        "secretName",
+        "serviceAccountName",
+        "serviceConfigPath",
+        "serviceCpu",
+        "serviceHealthPath",
+        "serviceLivenessProbeName",
+        "serviceMemory",
+        "servicePorts",
+        "serviceReadinessProbeName"
+      ],
+      "title": "Welcome4"
+    },
+    "ServicePort": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "name",
+        "port"
+      ],
+      "title": "ServicePort"
+    }
+  }
+}

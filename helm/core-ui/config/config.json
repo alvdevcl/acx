@@ -1,0 +1,24 @@
+{
+  "endpoints": {
+    "authenticate": "/api/v1/authenticate",
+    "changePassword": "/api/v1/password"
+  },
+  "url": {
+    "headerIframeURL": "/header",
+    "authServiceURL": "/auth",
+    "landingPageURL": "/ops360/",
+    "parentKey": "parent",
+    "originKey": "origin"
+  },
+  "cookie": {
+    "tokenKey": "rights",
+    "tokenUnauthorizedValue": "unauthorized"
+  },
+  "browsing": {
+    "instrumentsPageSize": 100,
+    "isCommentRequired": true,
+    "manualCorrectionStatusCode": 3,
+    "isSpreadSheetServiceSupported": true,
+    "timeSeriesDefaultRange": "1Y"
+  }
+}

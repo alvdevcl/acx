@@ -1,0 +1,14 @@
+serviceAccountName: ops360-sa
+namespace: ops360
+serviceAccountRoleArn: "insert-role-arn"
+
+secretStoreName: "ops360-secret-store"
+secretName: "ops360-secret"
+awsRegion: "us-east-1"
+
+secman_secret_entries:
+  - ENV_VAR
+
+secman_name: "aws-secrets-id"
+
+keystoreEnabled: true

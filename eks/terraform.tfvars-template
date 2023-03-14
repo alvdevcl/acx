@@ -1,0 +1,24 @@
+vpc_id = "vpc-071568decc831644f"
+
+eks_cluster_name = "Ops360EKSCluster"
+
+permissions_boundary = "arn:aws:iam::573361717332:policy/AdminPermissionsBoundary20230310085833882800000001"
+kubernetes_version   = "1.23"
+
+node_group_name = "Ops360NodeGroup"
+
+desired_size = 4
+max_size     = 4
+min_size     = 4
+
+kms_key_arn = "arn:aws:kms:us-east-1:573361717332:key/8c6a281d-b4f5-4df0-b6c9-ebeb88412b43"
+
+base_domain = "rdm.aws-dev.capgroup.com"
+
+atm_id      = "AA00002195"
+cost_center = "524108"
+ppmc_id     = "PRJ0011018"
+toc         = "ETOC"
+exp_date    = "99-00-9999"
+env         = "dev"
+sd_period   = "NA"

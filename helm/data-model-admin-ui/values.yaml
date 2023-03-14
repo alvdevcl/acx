@@ -1,0 +1,27 @@
+replicaCount: 1
+image: 039556708828.dkr.ecr.us-east-1.amazonaws.com/alveo-datamodel-admin-ui:1.0.5
+servicePorts:
+  - name: http
+    port: 8080
+
+serviceHealthPath: /
+
+# Routing
+routePrefix: /data-model-admin
+routeHost: "example.com"
+routePortName: http
+
+ingressName: data-model-admin-ui-ingress
+ingressOrder: 50
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+
+# Resources
+serviceCpu: 1
+serviceMemory: 1G
+
+# Service Image Config Path
+serviceConfigPath: "/etc/nginx"

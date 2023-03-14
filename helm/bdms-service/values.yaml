@@ -1,0 +1,72 @@
+namespace: ops360
+awsRegion: us-east-1
+replicaCount: 1
+image: image-url:tag
+servicePorts:
+  - name: http
+    port: 9000
+
+serviceHealthPath: /ac/v1/system-info
+
+ingressName: bdms-service-ingress
+ingressOrder: 20
+
+# Routing
+routePrefix: /ac
+routeHost: "example.com"
+routePortName: http
+routeOrder: 0
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+initialDelaySeconds: 60
+
+# Resources
+serviceCpu: 2
+serviceMemory: 4G
+
+# Service Image Config Path
+serviceConfigPath: "/home/user/app/conf"
+
+## Database Configuration
+# Postgres
+postgresDb: bdmsdb
+serviceAccountName: "bdms-service-sa"
+
+# Oracle
+oracleDb: RDM_OZ_ITE07_DX
+
+# Prime
+primeInstallation: RDM_AC
+
+## Security
+# Configure Java Keystore
+keystoreEnabled: true
+
+# AC Authentication
+authEnabled: false
+
+# Secrets
+secretName: bdms-service-secrets
+secretEntries:
+  - POSTGRES_USERNAME
+  - POSTGRES_PASSWORD
+  - POSTGRES_DATABASE
+  - POSTGRES_HOST
+  - POSTGRES_PORT
+  - PLAY_HTTP_SECRET_KEY
+  - KEYSTORE_KEY_ALIAS
+  - KEYSTORE_KEY_PASSWORD
+  - KEYSTORE_PASSWORD
+  - KEYSTORE_SIG_ALG
+  - ORACLE_USERNAME
+  - ORACLE_PASSWORD
+  - ORACLE_DATABASE
+  - ORACLE_HOST
+  - ORACLE_PORT
+  - PRIME_USERNAME
+  - PRIME_PASSWORD
+  - PRIME_HOST
+  - PRIME_INSTALLATION

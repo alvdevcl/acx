@@ -1,0 +1,27 @@
+replicaCount: 1
+image: 039556708828.dkr.ecr.us-east-1.amazonaws.com/data-view-admin-ui:1.0.9
+servicePorts:
+  - name: http
+    port: 8080
+
+serviceHealthPath: /data-view-admin
+
+# Routing
+ingressName: data-view-admin-ui-ingress
+ingressOrder: 70
+
+routePrefix: /data-view-admin
+routeHost: "example.com"
+routePortName: http
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+
+# Resources
+serviceCpu: 1
+serviceMemory: 1G
+
+# Service Image Config Path
+serviceConfigPath: "/etc/nginx"

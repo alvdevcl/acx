@@ -1,0 +1,24 @@
+{{- define "ops360lib.ingress.tpl" -}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.ingressName | default "ops360-ingress" }}
+  namespace: {{ .Values.k8sNamespace | default "ops360" }}
+  annotations:
+    kubernetes.io/ingress.class: "alb"
+    alb.ingress.kubernetes.io/target-type: "ip"
+    alb.ingress.kubernetes.io/group.name: "ops360"
+    alb.ingress.kubernetes.io/group.order: {{ .Values.ingressOrder | quote }}
+spec:
+  rules:
+    - host: {{ .Values.routeHost | default "example.com" }}
+      http:
+        paths:
+          - path: {{ .Values.routePrefix | default "/missing" }}
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Chart.Name }}
+                port:
+                  name: {{ .Values.routePortName | default "http" }}
+{{- end }}

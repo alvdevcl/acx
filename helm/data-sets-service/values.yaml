@@ -1,0 +1,55 @@
+replicaCount: 1
+image: 039556708828.dkr.ecr.us-east-1.amazonaws.com/alveo-data-sets-service:1.0.6
+servicePorts:
+  - name: http
+    port: 9000
+
+serviceHealthPath: /datasets
+
+# Routing
+ingressName: data-sets-service-ingress
+ingressOrder: 60
+
+routePrefix: /datasets
+routeHost: "example.com"
+routePortName: http
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+
+# Resources
+serviceCpu: 1
+serviceMemory: 1G
+
+# Service Image Config Path
+serviceConfigPath: "/home/user/app/conf"
+
+## Database Configuration
+# Postgres
+postgresDb: datasets
+
+## Security
+serviceAccountName: "data-sets-service-sa"
+
+# Configure Java Keystore
+keystoreEnabled: true
+
+# AC Authentication
+authEnabled: true
+
+## Secrets
+# Auth Service Secrets
+secretName: data-sets-service-secrets
+secretEntries:
+  - POSTGRES_USERNAME
+  - POSTGRES_PASSWORD
+  - POSTGRES_DATABASE
+  - POSTGRES_HOST
+  - POSTGRES_PORT
+  - PLAY_HTTP_SECRET_KEY
+  - KEYSTORE_KEY_ALIAS
+  - KEYSTORE_KEY_PASSWORD
+  - KEYSTORE_PASSWORD
+  - KEYSTORE_SIG_ALG

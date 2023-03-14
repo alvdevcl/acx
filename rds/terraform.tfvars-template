@@ -1,0 +1,13 @@
+vpc_id = "vpc-071568decc831644f"
+
+primary_secman_vpc_end_point = "vpce-0ef3476432445e323"
+
+base_domain = "rdm.aws-dev.capgroup.com"
+
+atm_id      = "AA00002195"
+cost_center = "524108"
+ppmc_id     = "PRJ0011018"
+toc         = "ETOC"
+exp_date    = "99-00-9999"
+env         = "dev"
+sd_period   = "NA"

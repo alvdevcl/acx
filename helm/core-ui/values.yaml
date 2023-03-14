@@ -1,0 +1,27 @@
+replicaCount: 1
+image: 039556708828.dkr.ecr.us-east-1.amazonaws.com/core-ui:1.0.6
+servicePorts:
+  - name: http
+    port: 8080
+
+serviceHealthPath: /
+
+# Routing
+routePrefix: /
+routeHost: "example.com"
+routePortName: http
+
+ingressName: core-ui-ingress
+ingressOrder: 1000
+
+# Probes
+# default value 'http'
+serviceLivenessProbeName: http
+serviceReadinessProbeName: http
+
+# Resources
+serviceCpu: 1
+serviceMemory: 1Gi
+
+# Service Image Config Path
+serviceConfigPath: "/var/www/conf"

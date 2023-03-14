@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome6",
+  "definitions": {
+    "Welcome6": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "serviceAccountName": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "serviceAccountRoleArn": {
+          "type": "string"
+        },
+        "secretStoreName": {
+          "type": "string"
+        },
+        "secretName": {
+          "type": "string"
+        },
+        "awsRegion": {
+          "type": "string"
+        },
+        "secman_secret_entries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "secman_name": {
+          "type": "string"
+        },
+        "keystoreEnabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "awsRegion",
+        "keystoreEnabled",
+        "namespace",
+        "secman_name",
+        "secman_secret_entries",
+        "secretName",
+        "secretStoreName",
+        "serviceAccountName",
+        "serviceAccountRoleArn"
+      ],
+      "title": "Welcome6"
+    }
+  }
+}

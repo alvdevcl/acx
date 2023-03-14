@@ -1,0 +1,12 @@
+{{- define "ops360lib.configmap.tpl" -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: {{ .Chart.Name }}
+    suite: ops360
+  name: {{ .Chart.Name }}
+  namespace: {{ .Values.k8sNamespace | default "ops360" }}
+data:
+{{ (tpl (.Files.Glob "config/*").AsConfig .) | indent 2 }}
+{{- end -}}
